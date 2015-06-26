@@ -288,12 +288,8 @@ Onion_Head,
 
         static public bool CheckStationLogging()
         {
-            if (EDDirectory == null)
+            if (string.IsNullOrEmpty(EDDirectory))
                 return true;
-
-            if (EDDirectory.Equals(""))
-                return true;
-
 
             if (!Directory.Exists(EDDirectory)) // For safety.
                 return true;
